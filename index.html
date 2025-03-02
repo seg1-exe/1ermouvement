@@ -403,6 +403,21 @@
         });
       
         video.addEventListener("click", () => {
+          // Avant de lancer la vidéo, on met en pause tous les lecteurs audio
+          document.querySelectorAll('.player-ctn audio').forEach(audio => {
+            if (!audio.paused) {
+              audio.pause();
+              // Mettre à jour l'icône play/pause pour le lecteur audio concerné
+              const player = audio.closest('.player-ctn');
+              const iconPlay = player.querySelector('.icon-play');
+              const iconPause = player.querySelector('.icon-pause');
+              if (iconPlay && iconPause) {
+                iconPlay.style.display = "block";
+                iconPause.style.display = "none";
+              }
+            }
+          });
+          
           // Remet la vidéo au tout début
           video.currentTime = 0;
           
@@ -411,7 +426,7 @@
             cursorText.style.display = "none";
           }
           
-          // Demande le plein écran pour la vidéo
+          // Passe la vidéo en plein écran
           if (video.requestFullscreen) {
             video.requestFullscreen();
           } else if (video.webkitRequestFullscreen) {
@@ -423,7 +438,7 @@
           // Active le son de la vidéo
           video.muted = false;
           
-          // Stocke la vidéo active en plein écran
+          // Stocke la vidéo active en plein écran (pour gérer la sortie du plein écran)
           currentFullscreenVideo = video;
         });
       });
