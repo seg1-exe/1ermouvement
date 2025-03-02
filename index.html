@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image" href="/images/cover.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/reset.css">
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="https://kit.fontawesome.com/847debfb6c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <title>1er Mouvement - H JeuneCrack</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="flair flair--3" id="cursorText"></div>
+      <header>
+        <h1>1er Mouvement</h1>
+        <h1>H JeuneCrack</h1>
+      </header>
+
+      <main>
+        <div id="intro">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, saepe. Saepe ratione cumque, expedita labore explicabo exercitationem? Corrupti similique laudantium nihil dicta, repellat sapiente? Officiis animi ratione dolores labore atque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus debitis numquam quos quis. Perspiciatis doloribus quasi, ipsa delectus sunt optio dolore quas illum sapiente repellendus amet dignissimos numquam voluptatibus unde! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta rerum magni eos esse ratione. Debitis delectus amet inventore necessitatibus dolorum. Atque debitis id ex a illo cum perspiciatis repudiandae eaque.</p>
+          <img src="/images/tracklist.png">
+        </div>
+
+        <div id="freestyle">
+          <video autoplay muted loop>
+            <source src="/images/freestyle.mp4">
+          </video>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sed omnis iure. Vel laborum inventore facere eligendi, optio fuga, dignissimos possimus incidunt suscipit tempora, delectus ea excepturi voluptates minima nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate et dolores temporibus molestiae, repellendus distinctio voluptatibus iusto dicta, vel sunt eligendi dolorem a modi cupiditate. Iusto neque repellat eos dolorum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam similique est totam laboriosam ab dolorum, tempore nemo! Voluptatem ad sequi impedit! Vel ex quae suscipit voluptatibus facere sapiente a nisi.</p>
+        </div>
+
+        <div id="trailer">
+          <video autoplay muted loop>
+            <source src="/images/trailer.mp4">
+          </video>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam laboriosam ullam asperiores nobis quae maxime cum facere minus eveniet debitis. Nihil ad laboriosam animi dolores assumenda cupiditate? Corporis, voluptate. Quia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur accusamus perferendis similique eos, quam vero. Quae et cumque reiciendis incidunt officiis provident, odio tempora excepturi harum doloremque vitae omnis debitis! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, pariatur praesentium ipsum minima repudiandae cupiditate, quo provident aspernatur cumque magni laborum blanditiis ad veniam quia placeat odio at tenetur rerum.</p>
+
+        </div>
+
+        <div class="songs">
+          <div id="kaboul-kitchen" class="songWclip">
+            <video autoplay muted loop><source src="/images/kaboul-kitchen.mp4"></video>
+            <div class="song-txt">
+              <h2>1. Kaboul Kitchen</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vitae, ducimus dolor unde sapiente error quibusdam a minima molestiae neque corporis repudiandae, aliquid voluptatem doloremque tenetur similique obcaecati voluptatum fuga! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui praesentium ipsam natus iste totam quisquam cumque ab dolores libero, excepturi aliquam aperiam, officiis labore dignissimos. Error perferendis odit facilis molestias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minima voluptas non doloribus dolor similique totam sapiente esse magnam, fugiat, ipsa, magni rem quidem. Eligendi, accusantium. Vel molestiae minus dolorem?</p>
+            </div>
+          </div>
+
+          <div id="sade" class="songWphoto">
+            <img src="/images/hjeunecrack1.png">
+            <div class="side-card">
+              <div class="song-txt">
+                <h2>2. Sade</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste reiciendis hic magnam maxime eos fugit cupiditate, sapiente eaque asperiores officia reprehenderit nulla quo! A ea sint modi mollitia doloremque facere. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto recusandae totam officiis labore, iure officia nisi harum ducimus ullam eos nam adipisci quo itaque neque doloremque fugit tempora voluptatum nesciunt. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, facere, optio repellat placeat cumque excepturi odit illum fuga exercitationem, ipsa voluptatibus. Aliquid, commodi eligendi. Amet provident obcaecati quidem quisquam ut!</p>
+              </div>
+  
+              <!-- Lecteur 1 -->
+              <div class="player-ctn" data-audio-src="/songs/Sade.mp3" data-player-id="player1">
+                <!-- Titre du morceau -->
+                <div class="player-title">Sade - H JeuneCrack</div>
+
+                <!-- Barre de progression et timers -->
+                <div class="player-progress">
+                  <span class="timer">0:00</span>
+                  <div id="myProgress">
+                    <div id="myBar"></div>
+                  </div>
+                  <span class="duration">2:05</span>
+                </div>
+
+                <!-- Boutons de contrôle -->
+                <div class="btn-ctn">
+                  <div class="btn-action" onclick="rewind('player1')">
+                    <div id="btn-faws-rewind">
+                      <i class='fas fa-backward'></i>
+                    </div>
+                  </div>
+                  <div class="btn-action" onclick="toggleAudio('player1')">
+                    <div id="btn-faws-play-pause">
+                      <i class='fas fa-play icon-play'></i>
+                      <i class='fas fa-pause icon-pause' style="display: none"></i>
+                    </div>
+                  </div>
+                  <div class="btn-action" onclick="forward('player1')">
+                    <div id="btn-faws-forward">
+                      <i class='fas fa-forward'></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              </div>
+            </div>
+            
+
+            <div id="le-beau-geste" class="songWphoto">
+              <div class="side-card">
+                <div class="song-txt">
+                  <h2>3. Le beau geste</h2>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste reiciendis hic magnam maxime eos fugit cupiditate, sapiente eaque asperiores officia reprehenderit nulla quo! A ea sint modi mollitia doloremque facere.</p>
+                </div>
+    
+                <!-- Lecteur 2 -->
+                <div class="player-ctn" data-audio-src="/songs/le_beau_geste.mp3" data-player-id="player2">
+                  <!-- Titre du morceau -->
+                  <div class="player-title">Le beau geste - H JeuneCrack</div>
+  
+                  <!-- Barre de progression et timers -->
+                  <div class="player-progress">
+                    <span class="timer">0:00</span>
+                    <div id="myProgress">
+                      <div id="myBar"></div>
+                    </div>
+                    <span class="duration">2:41</span>
+                  </div>
+  
+                  <!-- Boutons de contrôle -->
+                  <div class="btn-ctn">
+                    <div class="btn-action" onclick="rewind('player2')">
+                      <div id="btn-faws-rewind">
+                        <i class='fas fa-backward'></i>
+                      </div>
+                    </div>
+                    <div class="btn-action" onclick="toggleAudio('player2')">
+                      <div id="btn-faws-play-pause">
+                        <i class='fas fa-play icon-play'></i>
+                        <i class='fas fa-pause icon-pause' style="display: none"></i>
+                      </div>
+                    </div>
+                    <div class="btn-action" onclick="forward('player2')">
+                      <div id="btn-faws-forward">
+                        <i class='fas fa-forward'></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                </div>
+              <img src="/images/hjeunecrack2.png">
+            </div>
+  
+            <div id="le-gros-caillou" class="songWphoto">
+              <img src="/images/hjeunecrack3.png">
+              <div class="side-card">
+                <div class="song-txt">
+                  <h2>4. Le gros caillou</h2>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste reiciendis hic magnam maxime eos fugit cupiditate, sapiente eaque asperiores officia reprehenderit nulla quo! A ea sint modi mollitia doloremque facere.</p>
+                </div>
+    
+                <!-- Lecteur 3 -->
+                <div class="player-ctn" data-audio-src="/songs/le_gros_caillou.mp3" data-player-id="player3">
+                  <!-- Titre du morceau -->
+                  <div class="player-title">Le gros caillou - H JeuneCrack</div>
+  
+                  <!-- Barre de progression et timers -->
+                  <div class="player-progress">
+                    <span class="timer">0:00</span>
+                    <div id="myProgress">
+                      <div id="myBar"></div>
+                    </div>
+                    <span class="duration">2:33</span>
+                  </div>
+  
+                  <!-- Boutons de contrôle -->
+                  <div class="btn-ctn">
+                    <div class="btn-action" onclick="rewind('player3')">
+                      <div id="btn-faws-rewind">
+                        <i class='fas fa-backward'></i>
+                      </div>
+                    </div>
+                    <div class="btn-action" onclick="toggleAudio('player3')">
+                      <div id="btn-faws-play-pause">
+                        <i class='fas fa-play icon-play'></i>
+                        <i class='fas fa-pause icon-pause' style="display: none"></i>
+                      </div>
+                    </div>
+                    <div class="btn-action" onclick="forward('player3')">
+                      <div id="btn-faws-forward">
+                        <i class='fas fa-forward'></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                </div>
+            </div>
+  
+            <div id="manita" class="songWphoto">
+              <div class="side-card">
+                <div class="song-txt">
+                  <h2>5. Manita</h2>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste reiciendis hic magnam maxime eos fugit cupiditate, sapiente eaque asperiores officia reprehenderit nulla quo! A ea sint modi mollitia doloremque facere.</p>
+                </div>
+    
+                <!-- Lecteur 4 -->
+                <div class="player-ctn" data-audio-src="/songs/Manita.mp3" data-player-id="player4">
+                  <!-- Titre du morceau -->
+                  <div class="player-title">Manita - H JeuneCrack (co-prod. Simala)</div>
+  
+                  <!-- Barre de progression et timers -->
+                  <div class="player-progress">
+                    <span class="timer">0:00</span>
+                    <div id="myProgress">
+                      <div id="myBar"></div>
+                    </div>
+                    <span class="duration">2:43</span>
+                  </div>
+  
+                  <!-- Boutons de contrôle -->
+                  <div class="btn-ctn">
+                    <div class="btn-action" onclick="rewind('player4')">
+                      <div id="btn-faws-rewind">
+                        <i class='fas fa-backward'></i>
+                      </div>
+                    </div>
+                    <div class="btn-action" onclick="toggleAudio('player4')">
+                      <div id="btn-faws-play-pause">
+                        <i class='fas fa-play icon-play'></i>
+                        <i class='fas fa-pause icon-pause' style="display: none"></i>
+                      </div>
+                    </div>
+                    <div class="btn-action" onclick="forward('player4')">
+                      <div id="btn-faws-forward">
+                        <i class='fas fa-forward'></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                </div>
+              <img src="/images/hjeunecrack4.png">
+            </div>
+  
+            <div id="hustleuse" class="songWclip">
+              <video autoplay muted loop>
+                <source src="/images/hustleuse.mp4">
+              </video>
+              <div class="song-txt">
+                <h2>6. Hustleuse</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsa iusto illum ipsam ducimus omnis eaque voluptas quaerat est fugit. Reprehenderit labore repudiandae eius cum! Rerum libero dolorem eaque reiciendis?</p>
+              </div>
+            </div>
+  
+            <div id="deuxieme-peau" class="songWphoto">
+              <img src="/images/hjeunecrack5.png">
+              <div class="side-card">
+                <div class="song-txt">
+                  <h2>7. Deuxième peau</h2>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste reiciendis hic magnam maxime eos fugit cupiditate, sapiente eaque asperiores officia reprehenderit nulla quo! A ea sint modi mollitia doloremque facere.</p>
+                </div>
+    
+                <!-- Lecteur 5 -->
+                <div class="player-ctn" data-audio-src="/songs/deuxieme_peau.mp3" data-player-id="player5">
+                  <!-- Titre du morceau -->
+                  <div class="player-title">Deuxième peau - H JeuneCrack</div>
+  
+                  <!-- Barre de progression et timers -->
+                  <div class="player-progress">
+                    <span class="timer">0:00</span>
+                    <div id="myProgress">
+                      <div id="myBar"></div>
+                    </div>
+                    <span class="duration">2:35</span>
+                  </div>
+  
+                  <!-- Boutons de contrôle -->
+                  <div class="btn-ctn">
+                    <div class="btn-action" onclick="rewind('player5')">
+                      <div id="btn-faws-rewind">
+                        <i class='fas fa-backward'></i>
+                      </div>
+                    </div>
+                    <div class="btn-action" onclick="toggleAudio('player5')">
+                      <div id="btn-faws-play-pause">
+                        <i class='fas fa-play icon-play'></i>
+                        <i class='fas fa-pause icon-pause' style="display: none"></i>
+                      </div>
+                    </div>
+                    <div class="btn-action" onclick="forward('player5')">
+                      <div id="btn-faws-forward">
+                        <i class='fas fa-forward'></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                </div>
+            </div>
+  
+            <div id="kassded" class="songWphoto">
+              <div class="side-card">
+                <div class="song-txt">
+                  <h2>8. Kassded</h2>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste reiciendis hic magnam maxime eos fugit cupiditate, sapiente eaque asperiores officia reprehenderit nulla quo! A ea sint modi mollitia doloremque facere.</p>
+                </div>
+    
+                <!-- Lecteur 6 -->
+                <div class="player-ctn" data-audio-src="/songs/Sade.mp3" data-player-id="player6">
+                  <!-- Titre du morceau -->
+                  <div class="player-title">Kassded - H JeuneCrack</div>
+  
+                  <!-- Barre de progression et timers -->
+                  <div class="player-progress">
+                    <span class="timer">0:00</span>
+                    <div id="myProgress">
+                      <div id="myBar"></div>
+                    </div>
+                    <span class="duration">2:39</span>
+                  </div>
+  
+                  <!-- Boutons de contrôle -->
+                  <div class="btn-ctn">
+                    <div class="btn-action" onclick="rewind('player6')">
+                      <div id="btn-faws-rewind">
+                        <i class='fas fa-backward'></i>
+                      </div>
+                    </div>
+                    <div class="btn-action" onclick="toggleAudio('player6')">
+                      <div id="btn-faws-play-pause">
+                        <i class='fas fa-play icon-play'></i>
+                        <i class='fas fa-pause icon-pause' style="display: none"></i>
+                      </div>
+                    </div>
+                    <div class="btn-action" onclick="forward('player6')">
+                      <div id="btn-faws-forward">
+                        <i class='fas fa-forward'></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                </div>
+              <img src="/images/hjeunecrack6.png">
+            </div>
+          </div>
+      </main>
+      <footer>
+        <div class="crédits">
+          <h1>1er Mouvement</h1><br>
+          <p>
+            Réalisé et produit par <a href="https://www.instagram.com/hjeunecrack/">H JeuneCrack</a><br>
+            Écrit par <a href="https://www.instagram.com/hjeunecrack/">H JeuneCrack</a><br>
+            Enregistré chez <a href="https://www.instagram.com/hjeunecrack/">H JeuneCrack</a> et <a href="https://www.instagram.com/nava_inc/">Nava</a><br>
+            Mixé par <a href="https://www.instagram.com/hjeunecrack/">H JeuneCrack</a> et <a href="https://www.instagram.com/maxyoung.mix/">Maxime Petit</a> chez <a href="https://www.instagram.com/386studio_/">386 Studio</a><br>
+            Masterisé par <a href="https://www.instagram.com/jackkpalmer/">Jack Palmer</a><br><br>
+
+            Cover par <a href="https://www.instagram.com/borghesi.lena/">Léna Borghesi</a><br>
+            Retouches par <a href="https://www.instagram.com/cyril.gaborit/">Cyril Gaborit</a><br>
+            Artwork et backcover par <a href="https://www.instagram.com/holow2098/">Holow</a> et <a href="https://www.instagram.com/khhat2/">KHA2</a>
+          </p>
+          <br>
+          <br>
+          <br>
+          <p>
+            Photos par <a href="https://www.instagram.com/argenteurs/">Argenteurs</a><br>
+            Textes écrits par <a href="https://www.instagram.com/gothiclaire/">Rhaella</a>, <a href="https://www.instagram.com/skii.wav/">skii</a> & <a href="https://www.instagram.com/arthur__gllr/">seg1✰</a><br>
+            Webdesign et développement par <a href="https://www.instagram.com/arthur__gllr/">seg1✰</a>
+          </p>
+        </div>
+      </footer>
+
+    </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+      // Variable pour stocker la vidéo en plein écran
+      let currentFullscreenVideo = null;
+
+      // Code GSAP pour faire suivre l'élément #cursorText par la souris
+      const cursorText = document.getElementById("cursorText");
+      if (cursorText) {
+        gsap.set(cursorText, { xPercent: 20, yPercent: 10 });
+        let xTo = gsap.quickTo(cursorText, "x", { duration: 0.6, ease: "power3" }),
+            yTo = gsap.quickTo(cursorText, "y", { duration: 0.6, ease: "power3" });
+      
+        window.addEventListener("mousemove", e => {
+          xTo(e.clientX);
+          yTo(e.clientY);
+        });
+      } else {
+        console.error("L'élément #cursorText n'a pas été trouvé.");
+      }
+      
+      // Pour chaque vidéo, gérer l'affichage du texte et les actions au clic
+      document.querySelectorAll("video").forEach(video => {
+        video.addEventListener("mouseenter", () => {
+          const cursorText = document.getElementById("cursorText");
+          if (cursorText) {
+            cursorText.textContent = "Cliquer pour visionner";
+            cursorText.style.display = "block";
+          }
+        });
+      
+        video.addEventListener("mouseleave", () => {
+          const cursorText = document.getElementById("cursorText");
+          if (cursorText) {
+            cursorText.style.display = "none";
+          }
+        });
+      
+        video.addEventListener("click", () => {
+          // Remet la vidéo au tout début
+          video.currentTime = 0;
+          
+          const cursorText = document.getElementById("cursorText");
+          if (cursorText) {
+            cursorText.style.display = "none";
+          }
+          
+          // Demande le plein écran pour la vidéo
+          if (video.requestFullscreen) {
+            video.requestFullscreen();
+          } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
+          } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen();
+          }
+          
+          // Active le son de la vidéo
+          video.muted = false;
+          
+          // Stocke la vidéo active en plein écran
+          currentFullscreenVideo = video;
+        });
+      });
+      
+      // Écoute de l'événement de sortie du plein écran
+      document.addEventListener("fullscreenchange", () => {
+        if (!document.fullscreenElement && currentFullscreenVideo) {
+          currentFullscreenVideo.muted = true;
+          currentFullscreenVideo = null;
+        }
+      });
+      
+      // Pour compatibilité avec Safari/Chrome anciens, on peut aussi écouter webkitfullscreenchange
+      document.addEventListener("webkitfullscreenchange", () => {
+        if (!document.webkitFullscreenElement && currentFullscreenVideo) {
+          currentFullscreenVideo.muted = true;
+          currentFullscreenVideo = null;
+        }
+      });
+    });
+
+
+
+
+      document.addEventListener("DOMContentLoaded", function() {
+      // Pour chaque lecteur sur la page
+      const players = document.querySelectorAll('.player-ctn');
+      players.forEach(player => {
+        const audioSrc = player.dataset.audioSrc;
+        const playerId = player.dataset.playerId;
+
+        // Création de l'élément audio s'il n'existe pas déjà
+        let audio = player.querySelector('audio');
+        if (!audio) {
+          audio = new Audio(audioSrc);
+          audio.classList.add('audio-element');
+          audio.style.display = "none"; // On cache l'élément audio puisque le contrôleur personnalisé s'en charge
+          player.appendChild(audio);
+        }
+
+        // Si une position sauvegardée existe, la restaurer
+        const savedTime = localStorage.getItem('audioTime-' + playerId);
+        if (savedTime) {
+          audio.currentTime = parseFloat(savedTime);
+        }
+
+        // Mettre à jour la barre de progression et le timer
+        audio.addEventListener('timeupdate', () => {
+          const progressBar = player.querySelector('#myBar');
+          if (audio.duration) {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = progress + '%';
+          }
+          const timer = player.querySelector('.timer');
+          timer.textContent = formatTime(audio.currentTime);
+        });
+
+        // Sauvegarder la position lors de la pause
+        audio.addEventListener('pause', () => {
+          localStorage.setItem('audioTime-' + playerId, audio.currentTime);
+        });
+
+        // Mettre à jour la durée affichée quand les métadonnées sont chargées
+        audio.addEventListener('loadedmetadata', () => {
+          const durationSpan = player.querySelector('.duration');
+          durationSpan.textContent = formatTime(audio.duration);
+        });
+
+        // Ajouter la possibilité de cliquer sur la barre de progression
+        const progressBarContainer = player.querySelector('#myProgress');
+        progressBarContainer.addEventListener('click', (event) => {
+          const rect = progressBarContainer.getBoundingClientRect();
+          const offsetX = event.clientX - rect.left;
+          const percentage = offsetX / progressBarContainer.offsetWidth;
+          if (audio.duration) {
+            audio.currentTime = percentage * audio.duration;
+          }
+        });
+      });
+    });
+
+    // Formatage du temps en mm:ss
+    function formatTime(seconds) {
+      const m = Math.floor(seconds / 60);
+      const s = Math.floor(seconds % 60);
+      return m + ":" + (s < 10 ? "0" + s : s);
+    }
+
+    // Fonction toggleAudio qui met à jour l'icône et s'assure qu'un seul son joue à la fois
+    function toggleAudio(playerId) {
+      const player = document.querySelector(`.player-ctn[data-player-id="${playerId}"]`);
+      const audio = player.querySelector('audio');
+      const iconPlay = player.querySelector('.icon-play');
+      const iconPause = player.querySelector('.icon-pause');
+
+      // Mettre en pause tous les autres lecteurs
+      const allAudios = document.querySelectorAll('.player-ctn audio');
+      allAudios.forEach(otherAudio => {
+        if (otherAudio !== audio && !otherAudio.paused) {
+          otherAudio.pause();
+          const otherPlayer = otherAudio.closest('.player-ctn');
+          const otherIconPlay = otherPlayer.querySelector('.icon-play');
+          const otherIconPause = otherPlayer.querySelector('.icon-pause');
+          if (otherIconPlay && otherIconPause) {
+            otherIconPlay.style.display = "block";
+            otherIconPause.style.display = "none";
+          }
+        }
+      });
+
+      // Bascule play/pause pour le lecteur ciblé
+      if (audio.paused) {
+        audio.play();
+        if (iconPlay && iconPause) {
+          iconPlay.style.display = "none";
+          iconPause.style.display = "block";
+        }
+      } else {
+        audio.pause();
+        if (iconPlay && iconPause) {
+          iconPlay.style.display = "block";
+          iconPause.style.display = "none";
+        }
+      }
+    }
+
+    // Fonctions pour reculer et avancer (exemple : 10 secondes)
+    function rewind(playerId) {
+      const player = document.querySelector(`.player-ctn[data-player-id="${playerId}"]`);
+      const audio = player.querySelector('audio');
+      audio.currentTime = Math.max(0, audio.currentTime - 10);
+    }
+
+    function forward(playerId) {
+      const player = document.querySelector(`.player-ctn[data-player-id="${playerId}"]`);
+      const audio = player.querySelector('audio');
+      if (audio.duration) {
+        audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+      }
+    }
+
+
+      </script>
+      
+  </body>
+</html>
