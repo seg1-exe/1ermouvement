@@ -51,15 +51,6 @@ main>div{
     width: 30%;
 }
 
-#freestyle{
-    flex-direction: column;
-}
-
-#freestyle>.video, #freestyle>div{
-    margin: 20px 0;
-    width: 90%;
-}
-
 .songs{
     display: flex;
     flex-direction: column;
@@ -259,12 +250,12 @@ a{
     }
 
     #intro>img, #trailer>video{
-        width: 80%;
+        width: 90%;
     }
 
     #intro>p, #trailer>p{
         margin-top: 40px;
-        width: 80%;
+        width: 90%;
     }
 
     .songWphoto{
