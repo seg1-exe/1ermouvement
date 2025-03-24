@@ -21,7 +21,7 @@ p{
 
 header{
     height: 100vh;
-    background-image: url("/images/fond1920.png");
+    background-image: url("/images/fond1920.webp");
     display: flex;
     flex-direction: column; 
     align-items: flex-end;
@@ -55,9 +55,9 @@ main>div{
     flex-direction: column;
 }
 
-#freestyle>video, #freestyle>div{
+#freestyle>.video, #freestyle>div{
     margin: 20px 0;
-    width: 80%;
+    width: 90%;
 }
 
 .songs{
