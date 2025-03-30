@@ -279,6 +279,15 @@ a{
     main>div{
         margin: 50px 100px;
     }
+
+    .mobile-visible{
+        width: 90%;
+        margin-bottom: 40px;
+    }
+
+    .mobile-visible>iframe{
+        width: 100% !important;
+    }
 }
 
 
