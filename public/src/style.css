@@ -1,0 +1,320 @@
+*{
+    --red : #8C0101;
+    --beige : #F3DAD5;
+}
+
+#app{
+    background-color: var(--red);
+    font-family: Helvetica, sans-serif;
+    color: var(--beige);
+}
+
+h1{font-size: 48px;}
+h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+p{
+    font-size: 24px;
+    text-align: justify;
+}
+
+header{
+    height: 100vh;
+    background-image: url("/images/fond1920.webp");
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;
+    padding: 10px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+}
+
+main>div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px;
+}
+
+#intro>img, #trailer>video{
+    width: 50%;
+}
+
+#intro>p, #trailer>p{
+    width: 30%;
+}
+
+.songs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.songs>div{
+    margin: 100px 0;
+}
+
+.songWclip{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.songWphoto{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.songWclip>video{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+video:hover{
+    cursor: pointer;
+}
+
+.container-photo{
+    overflow: hidden;
+    margin: 1px;
+    width: 50%;
+}
+
+.container-photo img{
+    width: 100%;
+    transition: transform .5s ease;
+}
+
+.container-photo:hover img{
+    transform: scale(1.2);
+}
+
+.songWphoto>.side-card{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#cursorText {
+    display: none;
+    position: fixed;
+    pointer-events: none;
+    /* Autres styles souhaités (taille, couleur, etc.) */
+}
+
+
+/* Conteneur principal du lecteur */
+.player-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Titre */
+.player-title {
+    font-size: 18px;
+    color: var(--beige);
+    margin-bottom: 10px;
+}
+
+/* Zone de progression et timers */
+.player-progress {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.player-progress .timer,
+.player-progress .duration {
+    color: var(--beige);
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+#myProgress {
+    width: 300px;
+    background-color: rgba(217,217,242,0.61);
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+}
+
+#myBar {
+    width: 0%;
+    height: 5px;
+    background-color: var(--beige);
+    border-radius: 10px;
+}
+
+/* Boutons de contrôle */
+.btn-ctn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-action {
+    cursor: pointer;
+    padding-top: 10px;
+    width: 30px;
+    margin: 0 5px;
+}
+
+.fas {
+    color: var(--beige);
+    font-size: 20px;
+}
+
+ 
+
+footer{
+    padding: 5%;
+    text-align: start;
+}
+
+a{
+    font-weight: bold;
+    color: var(--beige);
+    text-decoration: none;
+}
+
+#tournée{
+    align-items: flex-start;
+}
+
+#tournée>.side-card>.song-txt>ul{
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.mobile-visible{display: none;}
+
+/* Responsive */
+@media screen and (max-width: 1200px){ 
+    h2{
+        font-size: 32px;
+    }
+    p, ul{
+        font-size: 18px !important;
+    }
+
+    #myProgress {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 1024px){ 
+    h2{
+        font-size: 28px;
+    }
+    p, ul, .player-title{
+        font-size: 16px !important;
+    }
+
+    #myProgress {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px){ 
+    h2{
+        font-size: 32px;
+    }
+    p, ul, .player-title{
+        font-size: 20px !important;
+    }
+
+    #myProgress {
+        width: 200px;
+    }
+    .mobile-visible{
+        display: block;
+    }
+    .mobile-invisible{
+        display: none;
+    }
+
+    #intro, #trailer{
+        flex-direction: column;
+    }
+
+    #intro>img, #trailer>video{
+        width: 90%;
+    }
+
+    #intro>p, #trailer>p{
+        margin-top: 40px;
+        width: 90%;
+    }
+
+    .songWphoto{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .songWphoto>.container-photo{
+        width: 100%;
+    }
+
+    .songWphoto>.side-card{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .songWphoto>.side-card>.song-txt{
+        margin-bottom: 40px;
+    }
+
+    main>div{
+        margin: 50px 100px;
+    }
+}
+
+
+@media screen and (max-width: 500px){ 
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    p, ul, .player-title{
+        font-size: 20px !important;
+    }
+
+    #myProgress {
+    width: 200px;
+    }
+
+    .songs>div{
+        margin: 50px 0;
+    }
+}
+
+@media screen and (max-width: 360px){ 
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    p, ul, .player-title{
+        font-size: 16px !important;
+    }
+
+    #myProgress {
+    width: 180px;
+    }
+}
+ 
